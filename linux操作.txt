@@ -144,3 +144,6 @@ gcc heyuanchuan.cpp -o heyuanchuan -lstdc++
 //编译C++需要加上-lstdc++参数
 g++ heyuanchuan.cpp  -o out	//g++可以直接编译c++
 
+别名alias
+alias chrome='google-chrome'
+unalias chrome
