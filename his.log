@@ -1,0 +1,991 @@
+  179  cd ..
+  180  sudo apt-get remove apache2.2-common
+  181  sudo apt-get autoremove
+  182  sudo apt-get clean
+  183  cd /etc/apache2/
+  184  ll
+  185  ll mods-available/
+  186  cd /etc/apache2/
+  187  ll
+  188  cd mods-available/
+  189  ll
+  190  cd ../mods-enabled/
+  191  ll
+  192  ln --help
+  193  sudo ln ../mods-available/proxy.load  proxy.load
+  194  ll
+  195  sudo ln -sf ../mods-available/proxy.load  proxy.load
+  196  ll
+  197  ll ../mods-available/
+  198  sudo ln -sf ../mods-available/proxy_http.load proxy_http.load
+  199  ll
+  200  cd ..
+  201  ll
+  202  sudo htpasswd -c gerrit.passwd bupt
+  203  sudo htpasswd  gerrit.passwd anti
+  204  cd /etc/apache2/
+  205  ll mods-available/
+  206  cd ,,
+  207  cd ..
+  208  ll
+  209  sudo rm -fr apache*
+  210  ll
+  211  sudo apt-get install apache2
+  212  ll
+  213  cd apache2/
+  214  ll
+  215  ll sites-available/
+  216  sudo apt-get install openssh-server
+  217  ll
+  218  cd sites-enabled/
+  219  ll
+  220  vim gerrit 
+  221  ll
+  222  cd /etc/apache2/
+  223  ll
+  224  cd mods-available/
+  225  ll
+  226  cd ..
+  227  cd mods-enabled/
+  228  ll
+  229  sudo rm -fr *
+  230  ll
+  231  cd ..
+  232  sud rm mods-*
+  233  sudo rm -fr  mods-*
+  234  ll
+  235  sudo apt-get autoremove
+  236  sudo apt-get clean
+  237  sudo apt-get install apache2
+  238  cd ..
+  239  cd
+  240  cd projects/
+  241  ll
+  242  vim gerrit 
+  243  sudo cp gerrit /etc/apache2/sites-available/
+  244  cd /etc/apache2/sites-enabled/
+  245  ll'
+  246  '
+  247  ll
+  248  sudo ln -sf ../sites-available/gerrit gerrit
+  249  ll
+  250  sudo apache2ctl restart
+  251  vim /etc/hosts
+  252  sudo vim gerrit 
+  253  sudo apache2ctl restart
+  254  sudo vim gerrit 
+  255  sudo apache2ctl restart
+  256  sudo vim gerrit 
+  257  ll
+  258  sudo rm 000-default 
+  259  ll
+  260  sudo apache2ctl restart
+  261  cd ..
+  262  ll
+  263  vim ports.conf 
+  264  vim apache2.conf 
+  265  sudo apache2ctl restart
+  266  sudo vim gerrit 
+  267  cd sites-available/
+  268  ll
+  269  vim gerrit 
+  270  sudo vim gerrit 
+  271  sudo apache2ctl restart
+  272  sudo vim gerrit 
+  273  sudo apache2ctl restart
+  274  sudo vim gerrit 
+  275  sudo apache2ctl restart
+  276  sudo apt-get --purge remove apache2*
+  277  sudo apt-get --purge remove apache
+  278  sudo apt-get --purge remove apache*
+  279  sudo apt-get autoremove
+  280  sudo find  /etc -name "*apache*" -exec  rm -rf {} 
+  281  sudo find  /etc -name "*apache*" -exec  rm -rf {}
+  282  gerrit/bin/gerrit.sh restart
+  283  sudo ifconfig
+  284  sudo reboot bupt
+  285  ll
+  286  cd projects/
+  287  ll
+  288  vim gerrit 
+  289  update-rc.d gerrit defaults
+  290  sudo cp gerrit /etc/init.d/
+  291  update-rc.d gerrit defaults
+  292  sudo update-rc.d gerrit defaults
+  293  sudo reboot
+  294  ps aux|gerrit
+  295  ps aux|grep gerrit
+  296  cd /etc/init.d/
+  297  sudo vim gerrit 
+  298  ll
+  299  sudo chmod a+x gerrit 
+  300  ./gerrit restart
+  301  vim gerrit 
+  302  sudo vim gerrit 
+  303  ./gerrit restart
+  304  sudo vim gerrit 
+  305  ./gerrit restart
+  306  sudo reboot
+  307  exit
+  308  cd /etc/ssh/
+  309  ll
+  310  vim sshd_config 
+  311  sudo vim sshd_config 
+  312  sudo /etc/init.d/ssh restart
+  313  serverice ssh restart
+  314  service ssh restart
+  315  sudo vim sshd_config 
+  316  sudo service ssh stop
+  317  sudo service ssh start
+  318  gerrit
+  319  ssh -p gerrit localhost 
+  320  ssh -p 29418 gerrit localhost 
+  321  ssh -p 29418 localhost gerrit
+  322  ssh -p 29418 localhost gerrit help 
+  323  cd 
+  324  cd ./ssh
+  325  cd .ssh/
+  326  ll
+  327  cat id_rsa.pub >> authorized_keys 
+  328  cd
+  329  cd projects/
+  330  ll
+  331  ssh -p 29418 localhost gerrit help
+  332  ssh -p 29418 10.108.244.116 gerrit help
+  333  ssh -p 29418 bupt@10.108.244.116 gerrit help
+  334  ll -A
+  335  cd  .ssh
+  336  mkdir .ssh
+  337  ll
+  338  ll .ssh
+  339  rmdir .ssh
+  340  ssh-keygen -t rsa -C bupt
+  341  cd .ssh/
+  342  ll
+  343  cd ..
+  344  l
+  345  ll
+  346  cat id_rsa.pub 
+  347  cat id_rsa.pub >> .ssh/authorized_keys
+  348  cat .ssh/authorized_keys 
+  349  wq
+  350  sudo reboot
+  351  ssh -p 29418 10.108.244.116 gerrit create-project
+  352  service gerrit stop
+  353  service gerrit start
+  354  cd projects/
+  355  ll
+  356  cd gerrit/
+  357  ll
+  358  cd etc/
+  359  ll
+  360  vim gerrit.config 
+  361  service gerrit restart
+  362  vim gerrit.config 
+  363  service gerrit restart
+  364  vim gerrit.config 
+  365  service gerrit restart
+  366  vim gerrit.config 
+  367  service gerrit restart
+  368  vim gerrit.config 
+  369  service gerrit restart
+  370  vim gerrit.config 
+  371  service gerrit restart
+  372  vim gerrit.config 
+  373  service gerrit restart
+  374  vim gerrit.config 
+  375  service gerrit restart
+  376  cd gerrit/
+  377  vim etc/gerrit.config 
+  378  vim gerrit/etc/gerrit.config 
+  379  service gerrit restart
+  380  cd /etc/apache2/
+  381  ll
+  382  htpasswd gerrit.passwd developer
+  383  sudo htpasswd gerrit.passwd developer
+  384  cat gerrit.passwd 
+  385  sudo htpasswd gerrit.passwd admin
+  386  cat gerrit.passwd 
+  387  exit
+  388  ll
+  389  rm id_rsa.pub 
+  390  cd /etc/apache2/
+  391  ll
+  392  sudo htpasswd gerrit.passwd zhongxingzhi
+  393  cat gerrit.passwd 
+  394  cd 
+  395  cd gerrit/
+  396  cd etc/
+  397  ll
+  398  vim gerrit.config 
+  399  cd gerrit/etc/
+  400  vim gerrit.config 
+  401  service gerrit restart
+  402  vim gerrit.config 
+  403  service gerrit restart
+  404  vim gerrit.config 
+  405  service gerrit restart
+  406  sudo ufw disable
+  407  vim gerrit.config 
+  408  service gerrit restart
+  409  vim gerrit.config 
+  410  service gerrit restart
+  411  sudo ifconfig
+  412  sudo apt-get install sendmail
+  413  echo "test mail ok" |mail -s "test mail ok" 510241419@qq.com
+  414  sudo apt-get install bsd-mail
+  415  sudo apt-get install mailutils
+  416  sudo apt-get install heirloom-mailx
+  417  echo "test mail ok" |mail -s "test mail ok" 510241419@qq.com
+  418  echo "test mail ok" |mail -s "test mail ok" zhongxingzhi@bupt.edu.cn
+  419  sudo apt-get install sendmail-cf
+  420  m4 --help
+  421  cd /etc/mail/
+  422  ll
+  423  m4 sendmail.mc > sendmail.cf
+  424  sudo m4 sendmail.mc > sendmail.cf
+  425  su
+  426  su root
+  427  su bupt
+  428  sudo m4 sendmail.mc >sendmail.cf
+  429  netstat -napt|grep sendmail
+  430  netstat -napt
+  431  netstat -nap
+  432  netstat -nap|grep mail
+  433  sudo passwd -u root
+  434  sudo passwd root
+  435  ll
+  436  su root
+  437  ll
+  438  netstat -nap|grep mail
+  439  service gerrit start
+  440  service gerrit restart
+  441  cd 
+  442  cd gerrit/
+  443  ll
+  444  cd etc/mail/
+  445  ll
+  446  vim Reverted.vm.example 
+  447  cd ..
+  448  ll
+  449  cd ..
+  450  ll
+  451  cd logs/
+  452  ll
+  453  vim error_log
+  454  cd /etc/mail/
+  455  ll
+  456  vim sendmail.cf 
+  457  mv sendmail.cf sendmail.org
+  458  sudo mv sendmail.cf sendmail.org
+  459  sudo m4 sendmail.mc > sendmail.cf
+  460  m4 sendmail.mc > sendmail.cf
+  461  sudo m4 sendmail.mc > sendmail.cf
+  462  sudo rm sendmail.cf
+  463  ll
+  464  sudo m4 sendmail.mc > sendmail.cf
+  465  m4
+  466  cd /home/bupt/gerrit/etc/
+  467  ll
+  468  vim gerrit.config 
+  469  cat /etc/hosts
+  470  wq
+  471  service gerrit restart
+  472  cat /etc/hosts
+  473  vim gerrit.config 
+  474  cd ..
+  475  ll
+  476  ll bin/
+  477  java -jar bin/gerrit.war gsql
+  478  service gerrit stop
+  479  java -jar bin/gerrit.war gsql
+  480  firefox 
+  481  ll
+  482  exit
+  483  ll
+  484  exit
+  485  sudo apt-get install ctags
+  486  sudo apt-get install clang
+  487  sudo apt-get upate
+  488  sudo apt-get update
+  489  vim
+  490  vim .vimrc
+  491  vim +install
+  492  vim vuq
+  493  vim
+  494  vim +BundleInstall
+  495  cd projects/
+  496  mkdir test
+  497  cd test/
+  498  vim test.cpp
+  499  clang test.cpp 
+  500  exit
+  501  ll
+  502  cd projects/
+  503  ll
+  504  cd test/
+  505  ll
+  506  g++ test.cpp 
+  507  sudo apt-get install build-essential
+  508  exir
+  509  exit
+  510  cd /etc/apache2/
+  511  ll
+  512  vim gerrit.passwd 
+  513  sudo htpasswd gerrit.passwd heyuanchuan
+  514  ssh -p 29418 -l anti 10.108.244.116 gerrit --help
+  515  ssh -p 29418 -l bupt 10.108.244.116 gerrit --help
+  516  ssh -p 29418 -l anti 10.108.244.116 gerrit --help
+  517  cd .ssh/
+  518  ll
+  519  cat authorized_keys 
+  520  q
+  521  cd ..
+  522  ssh -p 29418 -l anti 10.108.244.116 gerrit --help
+  523  cat authorized_keys 
+  524  cat .ssh/id_rsa.pub 
+  525  ssh -p 29418 -l anti 10.108.244.116 gerrit --help
+  526  ssh -p 29418 -l bupt 10.108.244.116 gerrit --help
+  527  ssh -p 29418 -l bupt 10.108.244.116 gerrit set-account heyuanchuan --add-email heyuanchuan@bupt.edu.cn
+  528  ssh -p 29418 -l bupt 10.108.244.116 gerrit set-account heyuanchuan --add-email hyuc@bupt.edu.cn
+  529  cd /etc/apache2/
+  530  ll
+  531  vim gerrit.passwd 
+  532  sudo htpasswd gerrit.passwd heyuanchuan
+  533  vim gerrit.passwd 
+  534  cat .ssh/id_rsa.pub 
+  535  cd /etc/apache2/
+  536  ll
+  537  sudo htpasswd gerrit.passwd andy
+  538  vim gerrit.passwd 
+  539  exit
+  540  ssh
+  541  sendmail -bp
+  542  echo "hh" | mail -s "test" zhongxingzhi2005@163.com
+  543  sendmail -bp
+  544  echo "hh" | mail -s "test" -c zhongxingzhi2005@gmail.com zhongxingzhi2005@163.com
+  545  sendmail -bp
+  546  vim /etc/hosts
+  547  sudo vim /etc/hosts
+  548  vim ~/.vimrc
+  549  vim /etc/hosts
+  550  vim gerrit/etc/gerrit.config 
+  551  ifconfig
+  552  mail
+  553  mail --help
+  554  echo "ip addr" | mail -s "bupt d10 server ip" zhongxingzhi@bupt.edu.cn
+  555  helo
+  556  hello
+  557  sendmail --help
+  558  sendmail -v
+  559  mail --help
+  560  mail -s "bupt d10 server ip" zhongxingzhi@bupt.edu.cn
+  561  mail -s "bupt d10 server ip" zhongxingzhi@bupt.edu.cn < /var/log/lpr.log 
+  562  mail -s "bupt d10 server ip" 2011111196@bupt.edu.cn < /var/log/lpr.log 
+  563  sendmail -to zhongxingzhi@bupt.edu.cn -m "tes"
+  564  sendmail -t zhongxingzhi@bupt.edu.cn -m "tes"
+  565  vim /etc/nail.rc 
+  566  ll
+  567  cd gerrit/
+  568  ll
+  569  cd etc/
+  570  ll
+  571  vim gerrit.config 
+  572  which sendmail
+  573  sendmail -v
+  574  sendmail -h
+  575  sendmail --help
+  576  sendmail
+  577  sendmail --help
+  578  mail -h
+  579  sendmail -bp
+  580  echo "test" | mail -s "hh" zhongxingzhi2005@gmail.com
+  581  sendmail -bp
+  582  ifconfig -a
+  583  sudo ifup eth0
+  584  sudo ifup
+  585  ifup --help
+  586  ifup
+  587  ifconfig up eth0
+  588  ifconfig --help
+  589  ifconfig up eth0
+  590  ifconfig eth0 up
+  591  sudo ifconfig eth0 up
+  592  ifconfig -aa
+  593  ifconfig -a
+  594  sudo ifup eth0
+  595  ifconfig -a
+  596  sudo ifconfig -a
+  597  cd gerrit/
+  598  ll
+  599  cd logs/
+  600  ll
+  601  time
+  602  datetime
+  603  clock
+  604  time -v
+  605  date
+  606  ll
+  607  vim sshd_log
+  608  vim httpd_log
+  609  ifconfig -a
+  610  netstat -utl
+  611  netstat -l
+  612  top
+  613  cd /etc/mail/
+  614  ll
+  615  vim access
+  616  sudo vim access
+  617  mail
+  618  mail -l
+  619  mail -f
+  620  mail
+  621  sendmail -q
+  622  cd /etc/mail/
+  623  ll
+  624  vim sendmail.*
+  625  vim local-host-names 
+  626  hostname -i
+  627  hostname 
+  628  vim sendmail.mc 
+  629  sudo vim sendmail.mc 
+  630  vim ~/.vimrc
+  631  sudo vim sendmail.mc 
+  632  vim ~/.vimrc
+  633  sudo vim sendmail.mc 
+  634  service sendmail restart
+  635  sudo service sendmail restart
+  636  echo "message" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  637  sendmail -qb
+  638  sendmail -q
+  639  sendmail -bp
+  640  echo "message" | mail -s "test" zhongxingzhi2005@gmail.com
+  641  sendmail -bp
+  642  echo "message" | mail -s "test" 510241419@qq.com
+  643  sendmail -bp
+  644  sudo apt-get remove sendmail
+  645  sudo apt-get autoremove
+  646  sudo reboot
+  647  sendmail -bq
+  648  sendmail -qb
+  649  sendmail -bq
+  650  exit
+  651  mailq
+  652  mailq
+  653  tail /var/log/mail.log
+  654  vim /etc/hosts
+  655  sudo -H vim /etc/hosts
+  656  echo "test" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  657  mailq
+  658  mailq --help
+  659  mail
+  660  rm /var/mail/bupt/* 
+  661  rm -r /var/mail/bupt/* 
+  662  sudo rm -r /var/mail/bupt/* 
+  663  ll /var/mail/bupt 
+  664  ll /var/mail/
+  665  sudo -H vim /etc/hosts
+  666  service sendmail restart
+  667  sudo service sendmail restart
+  668  echo "test" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  669  tail /var/log/mail.log
+  670  mailq
+  671  sudo -H vim /etc/hosts
+  672  sudo service sendmail restart
+  673  echo "test" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  674  mailq
+  675  mailq --help
+  676  mailq -h
+  677  mailq --h
+  678  mailq -h
+  679  mailq -help
+  680  mail
+  681  vim /var/log/mail.log
+  682  vim /etc/mail/sendmail.mc 
+  683  sudo apt-get install sendmail
+  684  sudo apt-get install sendmail-cf
+  685  ps aux|grep sendmail
+  686  cd /etc/mail/
+  687  ll
+  688  sudo -H vim sendmail.cf
+  689  sudo -H vim sendmail.mc
+  690  sudo mv sendmail.cf sendmail.cf.bak
+  691  m4 sendmail.mc sendmail.cf
+  692  echo "test" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  693  sendmail -bp
+  694  sudo service sendmail restart
+  695  sendmail -bp
+  696  echo "test" | mail -s "title" zhongxingzhi2005@gmail.com
+  697  sendmail -bp
+  698  sudo apt-get install mailutils
+  699  iptables -disable
+  700  iptables --disable
+  701  iptables --help
+  702  iptables stop
+  703  iptables -h
+  704  ufw --help
+  705  ufw disable
+  706  sudo ufw disable
+  707  echo "test" | mail -s "title" zhongxingzhi2005@gmail.com
+  708  echo "test" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  709  echo "test" | mail -s "title" zhongxingzhi2005@163.com
+  710  mailq
+  711  tail /var/log/maillog
+  712  tail /var/log/mail.log
+  713  mail --help
+  714  cd /var/spool/
+  715  ll
+  716  ll mqueue
+  717  sudo ll mqueue
+  718  sudo ls mqueue
+  719  sudo rm mqueue/*
+  720  sudo rm -r mqueue/*
+  721  cd mqueue
+  722  sudo cd mqueue
+  723  ll
+  724  rm mqueue/*
+  725  sudo rm mqueue/*
+  726  sudo rm /var/spool/mqueue/*
+  727  sudo rm /var/spool/mqueue/
+  728  sudo rm /var/spool/mqueue/*
+  729  sudo rm /var/spool/mqueue/
+  730  sudo rm /var/spool/mqueue/*
+  731  su
+  732  sudo ll mqueue
+  733  sudo ls mqueue
+  734  sudo ls
+  735  sudo ls -l
+  736  cd mqueue
+  737  sudo cd mqueue
+  738  mailq
+  739  rm mqueue/*
+  740  sudo rm mqueue/*
+  741  sudo rm -fr mqueue/*
+  742  ll
+  743  sudo ls mqueue
+  744  sudo ls mqueue/*
+  745  sudo rm -fr  mqueue/*
+  746  ls
+  747  ls mqueue
+  748  sudo ls mqueue
+  749  ll
+  750  du -m mqueue
+  751  sudo rm mqueue
+  752  sudo rm -fr mqueue
+  753  ll
+  754  mailq
+  755  sudo mkdir /var/spool/mqueue
+  756  mailq
+  757  echo "hh" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  758  mailq
+  759  ll
+  760  sudo chown smmta:smmta mqueue
+  761  ll
+  762  echo "hh" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  763  mailq
+  764  sendmail -bq
+  765  sudo apt-get remove sendmail
+  766  sudo apt-get autoremove
+  767  host -t mx bupt-desktop.com
+  768  host -t mx bupt-desktop.bupt.edu.cn
+  769  host -t mx bupt-desktop
+  770  host -t mx
+  771  host -l
+  772  host -l bupt.edu.cn
+  773  mail 
+  774  mail -l
+  775  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  776  vim /etc/hosts
+  777  host -t mx d10.codereview.com
+  778  host -t mx bupt.edu.cn
+  779  cd /etc/mail/
+  780  ll
+  781  sudo vim local-host-names 
+  782  host -t mx bupt-desktop
+  783  sudo vim local-host-names 
+  784  host -t mx bupt-desktop.bupt.edu.cn
+  785  sudo -H address.resolve 
+  786  sudo -H vim address.resolve 
+  787  vim submit.mc 
+  788  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  789  sudo apt-get install sendmail
+  790  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  791  mailq
+  792  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  793  mailq
+  794  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  795  mailq
+  796  sudo apt-get remove mail
+  797  sudo apt-get remove mailutil
+  798  sudo apt-get remove mailutils
+  799  sudo apt-get remove mail-utils
+  800  sudo apt-get remove mailx
+  801  sudo apt-get remove --purge sendmail
+  802  ll
+  803  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  804  mailq
+  805  sudo apt-get remove --purge sendmail
+  806  sudo apt-get autoremove
+  807  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  808  ll
+  809  cd /var/spool/
+  810  ll
+  811  sudo rm -fr mqueue-client/
+  812  ll
+  813  mail
+  814  sudo apt-get reinstall sendmail
+  815  sudo apt-get install sendmail
+  816  mailq
+  817  ll
+  818  echo "hh" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  819  mailq
+  820  sendmail -bq
+  821  ll
+  822  mailq
+  823  tail /var/log/mail.log
+  824  ll
+  825  ll mqueue-client/
+  826  sudo ll mqueue-client/
+  827  sudo ls mqueue-client/
+  828  sudo chmod a+rw mqueue
+  829  ll
+  830  sudo chmod a+rw mqueue-client/
+  831  ll
+  832  echo "hh" | mail -s "title" zhongxingzhi@bupt.edu.cn
+  833  mailq
+  834  sendmail -v
+  835  sendmail -v zhongxingzhi@bupt.edu.cn
+  836  sudo do-release-upgrade 
+  837  sudo service sendmail stop
+  838  sudo service postfix start
+  839  echo "mail" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  840  sudo service postfix start
+  841  ps aux |grep postfix
+  842  sudo /etc/init.d/postfix start
+  843  ps aux |grep postfix
+  844  echo "mail" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  845  cd /var/spool/
+  846  ll
+  847  cd postfix/
+  848  ll
+  849  cd public/
+  850  sudo ll public/
+  851  sudo ls public/
+  852  sudo mkfifo /var/spool/postfix/public/pickup
+  853  sudo ls public/
+  854  sudo ls -l public/
+  855  service postfix restart
+  856  sudo service postfix restart
+  857  echo "mail" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  858  mailq
+  859  mailx
+  860  echo "mail" | mail -s "test" zhongxingzhi2005@gmail.com
+  861  service sendmail restart
+  862  service postfix restart
+  863  sudo service postfix restart
+  864  ps aux |grep postfix
+  865  postqueue -p
+  866  netstat -l
+  867  netstat -lp
+  868  netstat -anp
+  869  sudo reboot
+  870  sendmail -bq
+  871  sendmail -q
+  872  sudo sendmail -q
+  873  sudo sendmail -bq
+  874  sudo sendmail -b
+  875  mailq
+  876  sudo apt-get autoremove
+  877  sudo apt-get remove sendmail
+  878  sudo apt-get autoremove
+  879  sudo apt-get mailu
+  880  sudo apt-get remove mailu
+  881  sudo apt-cache search mail
+  882  sudo apt-cache search mailu
+  883  sudo apt-get remove mailutils
+  884  sudo apt-get remove --purge sendmail
+  885  sudo aptitude install sendmail
+  886  sendmail -v
+  887  sendmail -v bupt-desktop
+  888  ll
+  889  mailq
+  890  cd /var/spool/
+  891  ll
+  892  sudo ls mqueue-client/
+  893  cd mail
+  894  ll
+  895  cd ..
+  896  ll
+  897  sudo chmod g+w mqueue-client/
+  898  sudo chmod g+w mqueue/
+  899  ll
+  900  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  901  mailq
+  902  cd
+  903  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  904  mailq
+  905  echo "hh" | mail -s "sub" zhongxingzhi@bupt.edu.cn
+  906  mailq
+  907  mail zhongxingzhi2005@163.com
+  908  mailq
+  909  sudo apt-get remove sendmail-cf
+  910  sudo apt-get autoremove
+  911  cd /etc/mail/
+  912  ll
+  913  vim access 
+  914  sudo rm *
+  915  sudo rm -fr *
+  916  l
+  917  ll
+  918  man mail
+  919  mailx
+  920  whereis mail
+  921  sudo apt-get remove mailx
+  922  mail
+  923  mail -s "sub" zhongxingzhi2005@gmail.com < /home/bupt/.vimrc 
+  924  mail
+  925  maix
+  926  mailx
+  927  mailx -s "sub" zhongxingzhi@bupt.edu.cn < /home/bupt/.vimrc
+  928  sudo aptitude install postfix
+  929  sudo apt-get update
+  930  sudo -H vim /etc/apt/sources.list
+  931  sudo apt-get update
+  932  sudo apt-get install postfox
+  933  sudo apt-get install postfix
+  934  mail -s "sub" zhongxingzhi@bupt.edu.cn < /home/bupt/.vimrc
+  935  sudo mail -s "sub" zhongxingzhi@bupt.edu.cn < /home/bupt/.vimrc
+  936  postfix --help
+  937  sendmail
+  938  sendmail --help
+  939  sendmail -h
+  940  ll ~
+  941  cd /etc/mail/
+  942  ll
+  943  cd ..
+  944  ll
+  945  cd postfix/
+  946  ll
+  947  vim main.cf 
+  948  echo "mail" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  949  postqueue -p
+  950  ls
+  951  netstat -anp
+  952  ps aux |grep postfix
+  953  postqueue -p
+  954  echo "mail" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  955  postqueue -p
+  956  echo "mail" | mail -s "test" zhongxingzhi2005@gmail.com
+  957  postqueue -p
+  958  echo "mail" | mail -s "test" 5102414159@qq.com
+  959  postqueue -p
+  960  tail /var/log/mail.log
+  961  echo "mail" | mail -s "test" 5102414159@qq.com
+  962  postqueue -p
+  963  tail /var/log/mail.log
+  964  postqueue -p
+  965  postqueue -s
+  966  postqueue -d
+  967  postqueue -f
+  968  postqueue -p
+  969  echo "mail" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  970  postqueue -p
+  971  echo "mail" | mail -s "test" zhongxingzhi2005@gmail.com
+  972  postqueue -p
+  973  echo "mail" | mail -s "test" zhongxingzhi@bupt.edu.cn
+  974  ifconfig -a | mail -s "test" zhongxingzhi@bupt.edu.cn
+  975  cd /var/log/
+  976  ll
+  977  vim mail.log
+  978  cd /etc/postfix/
+  979  ll
+  980  vim main.cf 
+  981  sudo -H vim /etc/hosts
+  982  sudo reboot
+  983  ifconfig -a | mail -s "test" zhongxingzhi@bupt.edu.cn
+  984  ifconfig -a | mail -s "gerrit ip address" zhongxingzhi@bupt.edu.cn
+  985  postqueue -p
+  986  cd /etc/postfix/
+  987  ll
+  988  sudo -H vim main.cf 
+  989  sudo -H vim sasl_password
+  990  postmap /etc/postfix/sasl_password 
+  991  sudo postmap /etc/postfix/sasl_password 
+  992  ll
+  993  vim sasl_password
+  994  service postfix restart
+  995  sudo service postfix restart
+  996  ifconfig -a | mail -s "gerrit ip address" zhongxingzhi@bupt.edu.cn
+  997  postqueue -p
+  998  ifconfig -a | mail -s "gerrit ip address" zhongxingzhi@bupt.edu.cn
+  999  postqueue -p
+ 1000  ll
+ 1001  vim main.cf 
+ 1002  postqueue -p
+ 1003  ifconfig -a | mail -s "gerrit ip address" zhongxingzhi@bupt.edu.cn
+ 1004  postqueue -p
+ 1005  ifconfig -a | mail -s "gerrit ip address" zhongxingzhi@bupt.edu.cn
+ 1006  postqueue -p
+ 1007  ll
+ 1008  rm sasl_password
+ 1009  sudo rm sasl_password
+ 1010  ll
+ 1011  vim sasl_password.db 
+ 1012  sudo rm sasl_password.db 
+ 1013  sudo -H vim main.cf 
+ 1014  postqueue -p
+ 1015  sudo service postfix restart
+ 1016  postqueue -p
+ 1017  mailq
+ 1018  postqueue -p
+ 1019  mailq
+ 1020  mailq -s
+ 1021  postqueue -f
+ 1022  mailq
+ 1023  sendmail --help
+ 1024  sendmail -v
+ 1025  mail
+ 1026  mailq
+ 1027  cd gerrit/
+ 1028  ll
+ 1029  cd etc/
+ 1030  ll
+ 1031  vim  gerrit.config 
+ 1032  sudo aptitude remove postfix
+ 1033  sudo aptitude remove sendmail
+ 1034  crontab -e
+ 1035  vim  gerrit.config 
+ 1036  ls ~
+ 1037  python /home/bupt/newgw.py -a login -u 2011111196 -p liuyingying
+ 1038  ping www.baidu.com
+ 1039  vim gerrit.config 
+ 1040  service restart gerrit
+ 1041  service gerrit restart
+ 1042  ll
+ 1043  cd 
+ 1044  ll
+ 1045  vim newgw.py 
+ 1046  cd gerrit/
+ 1047  cd etc/
+ 1048  ll
+ 1049  vi gerrit.config 
+ 1050  service gerrit restart
+ 1051  ll
+ 1052  cd ..
+ 1053  ll
+ 1054  cd tmp/
+ 1055  ll
+ 1056  cd ..
+ 1057  ll
+ 1058  ifconfig -a
+ 1059  ./firefox
+ 1060  firefox
+ 1061  ifconfig -a
+ 1062  pin www.baidu.com
+ 1063  ping www.baidu.com
+ 1064  sudo apt-get install wicd
+ 1065  vim .vimrc 
+ 1066  vim /etc/network/interfaces 
+ 1067  sudo vim /etc/network/interfaces 
+ 1068  sudo /etc/init.d/networking restart
+ 1069  sudo apt-get remove wicd
+ 1070  sudo apt-get autoremove
+ 1071  sudo reboot
+ 1072  ifup eth0
+ 1073  sudo ifup eth0
+ 1074  sudo ifdown eth0
+ 1075  sudo ifup eth0
+ 1076  ifconfig -a
+ 1077  sudo -H vim /etc/network/interfaces 
+ 1078  sudo service networking restart
+ 1079  sudo /etc/init.d/networking restart
+ 1080  ifconfig -a
+ 1081  sudo reboot
+ 1082  ifconfig -a
+ 1083  sudo ifup eth0
+ 1084  sudo ifconfig eth0
+ 1085  sudo ifconfig eth0 up
+ 1086  ifconfig -a
+ 1087  sudo apt-get install wicd
+ 1088  ifconfig -a
+ 1089  dhclient
+ 1090  sudo dhclient
+ 1091  sudo ifdown eth0
+ 1092  sudo ifup  eth0
+ 1093  sudo ifconfig eth0 down
+ 1094  sudo ifconfig eth0 up
+ 1095  sudo dhclient3
+ 1096  sudo dhclient
+ 1097  sudo apt-get remove wicd && sudo apt-get autoremoce
+ 1098  sudo apt-get remove wicd && sudo apt-get autoremove
+ 1099  sudo reboot
+ 1100  ifconfig -a
+ 1101  dhclient
+ 1102  sudo dhclient
+ 1103  sudo dhclient3
+ 1104  service networking restart
+ 1105  sudo service networking restart
+ 1106  sudo service networking-manager restart
+ 1107  sudo service network-manager restart
+ 1108  ifconfig -a
+ 1109  sudo service network-manager restart
+ 1110  sudo -H vim /etc/network/interfaces 
+ 1111  sudo service network-manager restart
+ 1112  sudo -H vim /etc/network/interfaces 
+ 1113  sudo service network-manager restart
+ 1114  sudo dhcp
+ 1115  sudo dhclient
+ 1116  sudo srrvice network-manager -restart
+ 1117  sudo srrvice network-manager restart
+ 1118  sudo service network-manager restart
+ 1119  sudo dhclient3
+ 1120  sudo service network-manager restart
+ 1121  sudo apt-get remove network-manager
+ 1122  sudo apt-get autoremove
+ 1123  sudo apt-get install wicd
+ 1124  sudo service network-manager stop
+ 1125  wicd
+ 1126  sudo wicd
+ 1127  suo reboot
+ 1128  sudo reboot
+ 1129  sudo dhclient
+ 1130  sudo dhclient3
+ 1131  sudo dhclient
+ 1132  sudo service networking restart
+ 1133  sudo service network restart
+ 1134  sudo service wicd restart
+ 1135  sudo reboot
+ 1136  sudo apt-get remove wicd
+ 1137  sudo apt-get autoremove
+ 1138  sudo apt-get install network-manager
+ 1139  ifconfig -a
+ 1140  sudo reboot
+ 1141  sudo ifconfig -a
+ 1142  sudo ifconfig eth0 up
+ 1143  sudo ifconfig -a
+ 1144  sudo dhclient
+ 1145  sudo ifconfig eth0 up
+ 1146  sudo ifconfig -a
+ 1147  sudo -H vim /etc/network/interfaces 
+ 1148  sudo apt-get install wicd
+ 1149  sudo reboot
+ 1150  exit
+
+#新建用户
+#终端
+ssh bupt@10.105.61.110  
+#服务器
+ 1151  cd /etc/apache2/
+ 1152  ll
+ 1153  vim gerrit.passwd 
+ 1154  sudo cp gerrit.passwd gerrit.passwd.bak
+ 1159  sudo htpasswd gerrit.passwd admin
+ 1161  exit
+#终端
+ssh -p 29418 -l heyuanchuan 10.105.61.110 gerrit set-account youname --add-email youremail@mail.com
+#end 新建用户
+
+
+#输出历史命令
+ 1177  history
+ 1178  history > his.log
