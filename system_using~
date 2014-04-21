@@ -135,7 +135,37 @@ find . -name "a*" -exec ls -l {}\
 \\所有查找到的文件执行ls -l命令
 
 
+vim
+sodu apt-get install vim //安装vim
 
+vim (启动vim)
+i (进入插入模式)
+<输入文本>
+<Esc> (回到命令模式)
+<:>(进入ex模式)
+:w filename (保存文件为'filename')
+:q (退出vim)
+vim filename (打开您刚才在vim中保存的文件)
+
+命令模式：
+i //在光标前插入文本
+o //在当前行的下面插入一行
+dd //删除当前行
+u //撤销上一个操作
+yy //复制当前行
+n+yy //复制n行
+p //粘贴
+r //替换字符
+/ //查找关键字
+
+ex模式
+:w //保存
+:q //退出
+:q! //强制退出
+:x //保存并退出
+:set number //显示行号
+:!系统命令 //执行一个系统命令
+:sh //切换回命令行，使用ctr+d返回vim
 
 
 

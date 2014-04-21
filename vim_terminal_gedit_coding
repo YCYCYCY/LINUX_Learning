@@ -1,0 +1,19 @@
+(1)terminal对中文的支持
+在terminal面板上选择菜单栏中的termianl-->set character encoding-->add or remove,然后在左侧选择GB2312等(GB似乎是国标的意思)，添加到右侧，关闭。然后在terminal面板上的 termianl-->set character encoding选定增加的中文编码，然后就可以正常显示中文了。
+如果显示内容中出现一些奇怪的符号，应该是系统字体的问题，可以在apperance-->font中更改，一般这种情况下对应的是等宽字体，那么把 等宽字体 设置为 文泉驿等宽微米黑。这种字体基本上还行。
+(2)vim对中文的支持 
+首先，你需要搞清楚vimrc所在的位置。一般来说，在linux系统里，应该是这样
+Linux: /usr/share/vim/vimrc在Windows系统，应该是在vim的安装目录
+在这之前，确定你的vi升级为vim了，有时候系统自带的是vi,不是vim，可以通过以下命令升级
+sudo apt-get install vim
+这里所说的都是全局设定，打开vimrc文件后，只需要在文件最后添加以下代码就可以了：
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+set fileformats=unix
+set encoding=prc
+这样，你的vim中文乱码问题就解决了！
+(3)gedit对中文的支持
+。在终端中运行 gconf-editor
+在打开的界面中选择： apps->gedit-2->preferences->encodings
+在右边的auto_detected和shown_in_menu上点右键编辑，点add，分别加入GB2312,并点UP按钮移动到第一位。
+关闭，就可以在gedit中显示中文了。
