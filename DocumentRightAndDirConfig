@@ -1,0 +1,29 @@
+1 用户和用户组
+user
+group
+others
+2 linux 文件权限
+r:read可读,4
+w:write可写,2
+x:execute可执行,1
+d:directory目录
+-:document文件
+l:linkfile链接文件
+b:可供存储的接口设备
+c:串行端口设备
+目录和文件的权限意义不相同:
+对于文件来说，r表示可以读取文件的内容，w表示可以编辑文件，x表示可以执行文件
+对于目录来说，r表示可以查看该目录下的文件名，w表示可以在该目录下新建，删除，重命名文件，x表示可以进入该目录
+3 改变文件属性和权限
+chgrp:改变文件所属的组
+chgrp groupname filename/dirname
+chown:改变文件的所有者
+chown username filename/dirname
+chown username:groupname filename/dirname
+chmod:改变文件的权限
+chmod xyz filename/dirname
+参数形式：a:all u:user g:group o:others
++:添加权限 -:减去权限 =:设置权限
+chmod u=rwx,go=rx filename/dirname
+chmod a+w filename/dirname 全部身份都添加write权限
+

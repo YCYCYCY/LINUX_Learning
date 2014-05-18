@@ -1,0 +1,18 @@
+inode、block、superblock
+第一个扇区最重要，里面有硬盘主引导记录及分区表。
+磁盘分区就是指定分区的起始和结束柱面，告诉操作系统此分区可以访问的区域。
+主分区和扩展分区最多可以有4个；
+扩展分区最多可以有1个；
+格式化：每种操作系统所设置的文件属性/权限不同，将分区进行格式化，以成为操作系统能够利用的文件系统格式.
+linux操作系统的文件除了数据外，还有一些属性，如文件权限(rwx)和文件属性(user、grp、others)。文件系统通常会将这两部分数据分别存放在不同的块，权限和属性放置在inode中，一个文件占用一个inode；实际数据放置到data block中，文件太大时，会占用多个block。而super block会记录整个文件的整体信息，包括inode和block的总量、使用量、剩余量。
+块组block group：当inode和block数量太多时，文件系统在格式化是会分为多个block group，每个块组都有自己的inode/block/superblock。
+inode：每个inode大小为128bytes，记录一个block号码要花掉4bytes。当文件太大时，直接记录所有的block是无法完成的。为此我们将inode定义为12个直接，一个间接，一个双间接与一个三间接记录区。
+super block：记录inode和block的总量，未使用和已使用的inode/block数量。文件系统的挂载时间、最近一次写入数据的时间、最近一次检验磁盘的时间等文件系统相关信息。block和inode的大小。
+文件系统描述说明file system description：描述每一个block group的开始和结束block号码。说明每个区段（superblock、bitmap、inodemap、data block）分别介于哪一个block号码之间。
+block bitmap块对照表：记录使用和未使用的block号码
+inode bitmapinode对照表：记录使用和未使用的inode号码
+
+
+
+
+
