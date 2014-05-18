@@ -1,0 +1,63 @@
+1 linux文件属性
+chgrp chown chmod
+chgrp grpname dirname/filename
+chown username dirname/filename
+chown username:grpname dirname/filename
+chmod 777 dirnaem/filename
+u g o a
++ - =
+chmod u=rwx,go=rx dirname/filename
+chmod a+x dirname/filename
+2 目录和文件权限
+对于目录来说，r是读取目录结构列表的权限，w是可以在目录下新建，删除，重命名文件和目录，x是进入目录的权限
+对于文件来说，r是读取文件内容的权限，w是编辑文件的权限，x是执行文件的权限。
+3 文件类型和扩展名
+-普通文件
+d目录文件
+l链接文件
+4 目录配置标准FHS
+根目录/：与开机系统有关
+/usr目录：unix software resource，与软件安装/执行有关
+/var目录：与系统运作过程有关
+目录说明：
+/bin:放置执行文件的目录
+/boot:放置开机会使用文件，内核文件等等
+/dev:配置文件
+/lib:开机时会用到的函数库
+/media:挂载u盘，移动硬盘
+/sbin:root才能用的命令
+/usr/local:系统管理员在本机上安装的软件，并非distribution提供的
+/usr/src:源文件
+/usr/include:头文件
+4 执行文件路径的遍历PATH
+每一个用户拥有自己的一个PATH
+echo $PATH 查看PATH变量
+PATH="$PATH":/root 添加PATH目录
+5 默认权限umask和隐藏权限
+umask 0222
+umask的分数指的是默认值需要减去的权限值
+对于一个文件来说，默认值是666
+对于一个目录来说，默认值是777
+隐藏属性：chattr lsattr [+-=] [ASacdistu] dirname/filename
+A:当设置了A权限时，当访问此文件时，访问时间atime不会被改变
+S：设置文件同步写进磁盘中
+a：设置文件只能增加文件不能删除，修改数据。只有root能设置此权限
+c：设置文件自动压缩
+i：设置文件不能被删除，改名，设置连接，也无发写入和添加数据。仅root能设置此权限
+6 文件特殊权限：  SUID，SGID，SBIT
+s:当s权限出现在own的x权限位置上时，表示文件拥有SUID权限；当s权限出现在grp的x权限位置上时，表示文件拥有SGID权限。
+SUID仅对二进制文件有效，仅在执行该文件的过程中有效。文件执行者將具有own的权限。
+如：普通用户可以通过passwd命令来改变shadow文件中的密码。可是只有root用户可以写入shadow文件，普通用户就是通过passwd命令来暂时拥有root的权限。
+SGID表示文件执行者会获得程序用户组的支持。  
+t:当t权限出现在others的x权限位置上时，表示文件拥有SBIT权限。
+SBIT权限表示若用户对该目录有w,x权限时，该用户在此目录下创建的文件只能被该用户和root用户删除。
+SUID：4
+SGID：2
+SBIT：1
+chmod 4755 filename
+7 文件的查询
+which查找命令的完整路径：which git
+查找文件：whereis filename
+locate keword
+find [PATH] [option] [action]
+
