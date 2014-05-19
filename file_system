@@ -11,8 +11,12 @@ super block：记录inode和block的总量，未使用和已使用的inode/block
 文件系统描述说明file system description：描述每一个block group的开始和结束block号码。说明每个区段（superblock、bitmap、inodemap、data block）分别介于哪一个block号码之间。
 block bitmap块对照表：记录使用和未使用的block号码
 inode bitmapinode对照表：记录使用和未使用的inode号码
-
-
-
-
-
+ext2会分配一个inode与至少一块block给该目录。inode记录该目录的相关权限与属性，并可记录在这个目录下的文件名与该文件名所占用的inode号码数据。
+将文件系统和目录树结合的操作叫做挂载。
+df:列出文件系统的整体磁盘使用量
+du:评估文件系统的磁盘使用量
+连接文件:ln
+hard link硬连接：多个文件名对应同一个inode号码
+symbolic link符号连接：创建一个独立的文件，而这个文件会让数据的读取指向它连接的那个文件的文件名。
+制作连接文件：
+ls [-sf] 源文件 目标文件
