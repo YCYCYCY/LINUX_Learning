@@ -1,3 +1,4 @@
+﻿
 1. 修改用户密码
 sudo passwd username
 当是root用户时，可以不写sudo。
@@ -26,6 +27,11 @@ tar –xvzf filename.gz.tar –C directorname
 free -m
 查看cpu和内存使用
 top
+
+
+开启root账户
+sudo passwd root
+http://www.metsky.com/archives/552.html
 
 
 
